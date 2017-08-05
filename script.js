@@ -5,8 +5,14 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
 });
 
 function createLink() {
-  const title = document.getElementsByClassName('js-issue-title')[0].textContent.trim();
   const url = document.URL;
+  var title = '';
+
+  if (url.includes('commit')) {
+    title = document.getElementsByClassName('commit-title')[0].textContent.trim();
+  } else {
+    title = document.getElementsByClassName('js-issue-title')[0].textContent.trim();
+  }
 
   saveToClipboard(`[${title}](${url})`);
 }
