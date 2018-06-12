@@ -20,14 +20,14 @@ function createLink() {
 }
 
 function saveToClipboard(str) {
-    var textArea = document.createElement("textarea");
-    textArea.style.cssText = "position:absolute;left:-100%";
+  var textArea = document.createElement("textarea");
+  textArea.style.cssText = "position:absolute;left:-100%";
 
-    document.body.appendChild(textArea);
+  document.body.appendChild(textArea);
 
-    textArea.value = str;
-    textArea.select();
-    document.execCommand("copy");
+  textArea.value = str;
+  textArea.select();
+  document.execCommand("copy");
 
-    document.body.removeChild(textArea);
+  document.body.removeChild(textArea);
 }
