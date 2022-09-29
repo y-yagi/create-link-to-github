@@ -1,20 +1,17 @@
 {
   "name": "Create link to GitHub",
-  "version": "0.0.4",
-  "manifest_version": 2,
+  "version": "0.0.5",
+  "manifest_version": 3,
   "description": "Create a link to GitHub with markdown",
   "permissions": [
     "tabs",
-    "contextMenus",
-    "http://*/*",
-    "https://*/*"
+    "contextMenus"
   ],
   "content_scripts": [{
     "matches": ["<all_urls>"],
     "js": ["script.js"]
   }],
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "background.js"
   }
-
 }

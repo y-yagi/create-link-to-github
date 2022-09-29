@@ -3,4 +3,4 @@ function onClickHandler(info, tab) {
 }
 
 chrome.contextMenus.onClicked.addListener(onClickHandler);
-chrome.contextMenus.create({title: "Create a link to GitHub"});
+chrome.contextMenus.create({title: "Create a link to GitHub", id: "createLinktoGitHub"});
